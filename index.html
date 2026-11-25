@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pixelaria Manager</title>
+</head>
+<body>
+
+<div class="container">
+    <!-- Menu Lateral -->
+     <aside class="sidebar">
+
+        <h2>Pixelaria</h2>
+        <p>Manager</p>
+
+        <nav>
+            <a href="#" class="active">Dashboard</a>
+            <a href="#">Pedidos</a>
+            <a href="#">Produtos</a>
+            <a href="#">Caixa</a>
+        </nav>
+     </aside>
+    
+     <!-- Conteúdo Principal -->
+        <main class="main-content">
+
+            <header>
+                <h1>Dashboard</h1>
+                <p>Bem-vinda ao Gerenciamento da sua Loja!</p>
+            </header>
+
+            <!-- Indicadores -->
+             <section class="cards">
+
+                <div class="card">
+                    <h3>Vendas no Mês</h3>
+                    <p>R$ 0,00</p>
+                </div>
+
+                <div class="card">
+                    <h3>Pedidos em Andamento</h3>
+                    <p>0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Pedidos Concluídos</h3>
+                    <p>0</p>
+                </div>
+
+             </section>
+
+             <!-- Pedidos recentes -->
+              <section class="orders">
+                <h2>Novo Pedido</h2>
+
+                <form id="form-pedido">
+                    <label for="cliente">Nome do Cliente:</label>
+                    <input type="text" id="cliente" required>
+
+                    <label for="produto">Produto:</label>
+                    <input type="text" id="produto" required>
+
+                    <label for="valor">Valor:</label>
+                    <input type="number" id="valor" step="0.01" min="0.01" required>
+
+                    <label for="status">Status:</label>
+                    <select id="status">
+                        <option value="Em Andamento">Em Andamento</option>
+                        <option value="Pronto">Pronto</option>
+                        <option value="Entregue">Entregue</option>
+                    </select>
+
+                    <button type="submit">Cadastrar Pedido</button>
+                </form>
+              </section>
+
+              <section class="orders">
+
+                <h2>Pedidos Recentes</h2>
+
+                <div id="lista-pedidos"></div>
+              </section>
+</div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
