@@ -1,0 +1,11 @@
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Informações privadas
+.env
+.env.*
+!.env.example
+
+# Dependências
+node_modules/
